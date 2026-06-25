@@ -112,14 +112,29 @@
         entry.target.classList.toggle("in-view", entry.isIntersecting);
       });
     }, {
-      threshold: 0.18,
-      rootMargin: "0px 0px -6% 0px"
+      threshold: 0.1,
+      rootMargin: "0px 0px -2% 0px"
     });
 
     items.forEach(function (el, i) {
       el.style.transitionDelay = (i % 3) * 70 + "ms";
       observer.observe(el);
     });
+
+    // Safety net: on touch devices the visual viewport can change height
+    // (address bar / keyboard show-hide) without a "scroll" event firing
+    // for elements already on screen. Re-check on resize/orientation change
+    // so nothing stays stuck invisible.
+    function recheck() {
+      items.forEach(function (el) {
+        var r = el.getBoundingClientRect();
+        var visible = r.top < window.innerHeight && r.bottom > 0;
+        if (visible) el.classList.add("in-view");
+      });
+    }
+    window.addEventListener("resize", recheck);
+    window.addEventListener("orientationchange", recheck);
+    window.addEventListener("load", recheck);
   }
 
   /* ===================== MENU TABS ===================== */

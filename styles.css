@@ -386,8 +386,7 @@ section{ position:relative; padding:120px 0; }
 =================================================== */
 .reveal{
   opacity:0;
-  transition:opacity .9s var(--ease), transform .9s var(--ease), filter .9s var(--ease);
-  filter:blur(2px);
+  transition:opacity .7s var(--ease), transform .7s var(--ease);
 }
 .reveal[data-reveal="zoom"]{ transform:scale(.8); }
 .reveal[data-reveal="up"]{ transform:translateY(40px) scale(.96); }
@@ -395,7 +394,6 @@ section{ position:relative; padding:120px 0; }
 .reveal.in-view{
   opacity:1;
   transform:none;
-  filter:blur(0);
 }
 
 /* stagger children inside grids slightly via nth-child using CSS transition-delay set inline by JS if needed */
