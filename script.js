@@ -164,18 +164,6 @@
     });
   }
 
-  /* ===================== CONTACT FORM ===================== */
-  function initForm() {
-    var form = document.getElementById("reserveForm");
-    var success = document.getElementById("formSuccess");
-    if (!form) return;
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      success.classList.add("show");
-      form.reset();
-      setTimeout(function () { success.classList.remove("show"); }, 6000);
-    });
-  }
 
   /* ===================== FOOTER YEAR ===================== */
   function initYear() {
@@ -190,7 +178,6 @@
     initHeroZoom();
     initReveal();
     initMenuTabs();
-    initForm();
     initYear();
   });
 })();
