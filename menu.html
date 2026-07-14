@@ -2,162 +2,209 @@
 
 <html lang="de">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Speisekarte – Casa Mia Riesa</title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&amp;family=Jost:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
-<link href="styles.css" rel="stylesheet"/>
-<style>
-    /* ── Menu page extras ───────────────────────────── */
-    .menu-page-hero{
-      background: var(--green-900);
-      border-bottom: 1px solid var(--border);
-      padding: 80px 0 48px;
-      text-align: center;
-    }
-    .menu-page-hero .brand-mark{ font-size:2rem; }
-    .menu-page-hero h1{
-      font-family: var(--font-display);
-      font-size: clamp(2rem, 5vw, 3.2rem);
-      font-weight: 400;
-      color: var(--cream);
-      margin: 16px 0 8px;
-    }
-    .menu-page-hero h1 em{ color: var(--brown-300); font-style: italic; }
-    .menu-page-hero p{
-      color: var(--muted);
-      font-size: .9rem;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-    }
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='50' fill='%230f2018'/><text y='.9em' font-size='60' x='50%25' dominant-baseline='top' text-anchor='middle' fill='%23c79762' font-family='serif' font-weight='bold'>CM</text></svg>">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Speisekarte – Casa Mia Riesa</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&amp;family=Jost:wght@300;400;500&amp;display=swap" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+    <style>
+        /* ── Menu page extras ───────────────────────────── */
+        .menu-page-hero {
+            background: var(--green-900);
+            border-bottom: 1px solid var(--border);
+            padding: 80px 0 48px;
+            text-align: center;
+        }
 
-    /* ── Category tabs ──────────────────────────────── */
-    .menu-tabs-wrap{
-      position: static;
-      background: var(--bg);
-      border-bottom: 1px solid var(--border);
-      overflow-x: auto;
-      scrollbar-width: none;
-    }
-    .menu-tabs-wrap::-webkit-scrollbar{ display:none; }
-    .menu-tabs{
-      display: flex;
-      gap: 0;
-      min-width: max-content;
-      padding: 0 24px;
-    }
-    .menu-tab{
-      background: none;
-      border: none;
-      border-bottom: 2px solid transparent;
-      color: var(--muted);
-      cursor: pointer;
-      font-family: var(--font-body);
-      font-size: .78rem;
-      font-weight: 500;
-      letter-spacing: .1em;
-      padding: 9px 16px;
-      text-transform: uppercase;
-      transition: color .2s, border-color .2s;
-      white-space: nowrap;
-    }
-    .menu-tab:hover{ color: var(--cream); }
-    .menu-tab.active{
-      border-bottom-color: var(--brown-300);
-      color: var(--brown-300);
-    }
+            .menu-page-hero .brand-mark {
+                font-size: 2rem;
+            }
 
-    /* ── Menu panels ────────────────────────────────── */
-    .menu-panels{ padding: 48px 0 80px; }
-    .menu-panel{ display: none; }
-    .menu-panel.active{ display: block; }
+            .menu-page-hero h1 {
+                font-family: var(--font-display);
+                font-size: clamp(2rem, 5vw, 3.2rem);
+                font-weight: 400;
+                color: var(--cream);
+                margin: 16px 0 8px;
+            }
 
-    .panel-header{
-      text-align: center;
-      margin-bottom: 48px;
-    }
-    .panel-header h2{
-      font-family: var(--font-display);
-      font-size: clamp(1.8rem, 4vw, 2.6rem);
-      font-weight: 400;
-      color: var(--cream);
-      margin-bottom: 6px;
-    }
-    .panel-header .panel-sub{
-      color: var(--muted);
-      font-size: .85rem;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-    }
-    .panel-note{
-      text-align: center;
-      color: var(--muted);
-      font-size: .88rem;
-      font-style: italic;
-      margin: -28px 0 40px;
-    }
-    .menu-divider{
-      width: 60px;
-      height: 1px;
-      background: var(--brown-500);
-      margin: 16px auto 0;
-      opacity: .6;
-    }
+                .menu-page-hero h1 em {
+                    color: var(--brown-300);
+                    font-style: italic;
+                }
 
-    /* ── Items grid ─────────────────────────────────── */
-    .items-grid{
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2px 48px;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-    .menu-item{
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 16px;
-      padding: 18px 0;
-      border-bottom: 1px solid var(--border);
-    }
-    .item-body{ flex: 1; min-width: 0; }
-    .item-name{
-      color: var(--cream);
-      font-family: var(--font-display);
-      font-size: 1rem;
-      font-weight: 400;
-      line-height: 1.3;
-      margin-bottom: 3px;
-    }
-    .item-nr{
-      color: var(--brown-500);
-      font-size: .72rem;
-      font-weight: 500;
-      letter-spacing: .06em;
-      margin-right: 6px;
-    }
-    .item-desc{
-      color: var(--muted);
-      font-size: .82rem;
-      line-height: 1.4;
-    }
-    .item-price{
-      color: var(--brown-300);
-      font-family: var(--font-display);
-      font-size: .95rem;
-      font-weight: 600;
-      white-space: nowrap;
-      flex-shrink: 0;
-    }
+            .menu-page-hero p {
+                color: var(--muted);
+                font-size: .9rem;
+                letter-spacing: .08em;
+                text-transform: uppercase;
+            }
 
-    @media(max-width:700px){
-      .items-grid{ grid-template-columns:1fr; gap:0; }
-      .menu-tab{ padding:12px 12px; font-size:.72rem; }
-    }
-  </style>
+        /* ── Category tabs ──────────────────────────────── */
+        .menu-tabs-wrap {
+            position: static;
+            background: var(--bg);
+            border-bottom: 1px solid var(--border);
+            overflow-x: auto;
+            scrollbar-width: none;
+        }
+
+            .menu-tabs-wrap::-webkit-scrollbar {
+                display: none;
+            }
+
+        .menu-tabs {
+            display: flex;
+            gap: 0;
+            min-width: max-content;
+            padding: 0 24px;
+        }
+
+        .menu-tab {
+            background: none;
+            border: none;
+            border-bottom: 2px solid transparent;
+            color: var(--muted);
+            cursor: pointer;
+            font-family: var(--font-body);
+            font-size: .78rem;
+            font-weight: 500;
+            letter-spacing: .1em;
+            padding: 9px 16px;
+            text-transform: uppercase;
+            transition: color .2s, border-color .2s;
+            white-space: nowrap;
+        }
+
+            .menu-tab:hover {
+                color: var(--cream);
+            }
+
+            .menu-tab.active {
+                border-bottom-color: var(--brown-300);
+                color: var(--brown-300);
+            }
+
+        /* ── Menu panels ────────────────────────────────── */
+        .menu-panels {
+            padding: 48px 0 80px;
+        }
+
+        .menu-panel {
+            display: none;
+        }
+
+            .menu-panel.active {
+                display: block;
+            }
+
+        .panel-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+            .panel-header h2 {
+                font-family: var(--font-display);
+                font-size: clamp(1.8rem, 4vw, 2.6rem);
+                font-weight: 400;
+                color: var(--cream);
+                margin-bottom: 6px;
+            }
+
+            .panel-header .panel-sub {
+                color: var(--muted);
+                font-size: .85rem;
+                letter-spacing: .12em;
+                text-transform: uppercase;
+            }
+
+        .panel-note {
+            text-align: center;
+            color: var(--muted);
+            font-size: .88rem;
+            font-style: italic;
+            margin: -28px 0 40px;
+        }
+
+        .menu-divider {
+            width: 60px;
+            height: 1px;
+            background: var(--brown-500);
+            margin: 16px auto 0;
+            opacity: .6;
+        }
+
+        /* ── Items grid ─────────────────────────────────── */
+        .items-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2px 48px;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 16px;
+            padding: 18px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .item-body {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .item-name {
+            color: var(--cream);
+            font-family: var(--font-display);
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.3;
+            margin-bottom: 3px;
+        }
+
+        .item-nr {
+            color: var(--brown-500);
+            font-size: .72rem;
+            font-weight: 500;
+            letter-spacing: .06em;
+            margin-right: 6px;
+        }
+
+        .item-desc {
+            color: var(--muted);
+            font-size: .82rem;
+            line-height: 1.4;
+        }
+
+        .item-price {
+            color: var(--brown-300);
+            font-family: var(--font-display);
+            font-size: .95rem;
+            font-weight: 600;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        @media(max-width:700px) {
+            .items-grid {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+
+            .menu-tab {
+                padding: 12px 12px;
+                font-size: .72rem;
+            }
+        }
+    </style>
 </head>
 <body>
 <!-- HEADER -->
