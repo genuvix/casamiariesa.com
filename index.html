@@ -9,6 +9,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<style>
+img.gallery-zoom { transform: scale(1.35); }
+.gallery-item:hover img.gallery-zoom { transform: scale(1.5); }
+</style>
 </head>
 <body>
 <div class="grain"></div>
@@ -121,7 +125,7 @@
   </div>
   <div class="gallery-grid">
     <figure class="gallery-item reveal" data-reveal="zoom">
-      <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkzQRPxdwbLxk8MYYKvdYWwSZnrwlp76OQzbHtWcVPgOt6c4cD5T_fXHuofk9JafhHB5nLnjF6OERzVR4pQzvlrkt3GW7_14fe_70Oxti5a1nMd1lAjo4Mry5p9m1oVHeXnd7DZ=s1360-w1360-h1020-rw" alt="Pasta dish" loading="lazy" style="object-fit:cover;object-position:center center;transform:scale(1.35);transition:transform .7s cubic-bezier(.22,.61,.36,1),filter .5s;">
+      <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkzQRPxdwbLxk8MYYKvdYWwSZnrwlp76OQzbHtWcVPgOt6c4cD5T_fXHuofk9JafhHB5nLnjF6OERzVR4pQzvlrkt3GW7_14fe_70Oxti5a1nMd1lAjo4Mry5p9m1oVHeXnd7DZ=s1360-w1360-h1020-rw" alt="Pasta dish" loading="lazy" class="gallery-zoom">
     </figure>
     <figure class="gallery-item reveal" data-reveal="zoom">
       <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=75" alt="Pizza" loading="lazy">
