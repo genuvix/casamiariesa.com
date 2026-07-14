@@ -11,7 +11,6 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
 <div class="grain"></div>
 <div class="progress-bar" id="progressBar"></div>
 
@@ -22,7 +21,6 @@
       <span class="brand-mark">CM</span>
       <span class="brand-name">Casa Mia <em>Riesa</em></span>
     </a>
-
     <nav class="main-nav" id="mainNav">
       <a href="#home" data-de="Start" data-en="Home">Start</a>
       <a href="#about" data-de="Über uns" data-en="About">Über uns</a>
@@ -30,7 +28,6 @@
       <a href="#gallery" data-de="Galerie" data-en="Gallery">Galerie</a>
       <a href="#contact" data-de="Kontakt" data-en="Contact">Kontakt</a>
     </nav>
-
     <div class="header-actions">
       <div class="lang-switch" id="langSwitch" role="group" aria-label="Language switch">
         <button type="button" class="lang-btn active" data-lang="de">DE</button>
@@ -55,7 +52,7 @@
     </h1>
     <p class="hero-sub" data-de="Handgemachte Pasta, langsam geschmorte Saucen und der Geschmack der italienischen Heimat – mitten in Riesa." data-en="Handmade pasta, slow-braised sauces and the taste of Italy at home – right in the middle of Riesa.">Handgemachte Pasta, langsam geschmorte Saucen und der Geschmack der italienischen Heimat – mitten in Riesa.</p>
     <div class="hero-cta">
-      <a href="#menu" class="btn btn-primary" data-de="Speisekarte ansehen" data-en="View menu">Speisekarte ansehen</a>
+      <a href="menu.html" class="btn btn-primary" data-de="Speisekarte ansehen" data-en="View menu">Speisekarte ansehen</a>
     </div>
   </div>
   <a href="#about" class="scroll-cue" aria-hidden="true"><span></span></a>
@@ -84,7 +81,6 @@
         data-en="Whether it's a cosy dinner for two, a family celebration, or a spontaneous cappuccino in between – with us, you're always family.">
         Ob gemütliches Abendessen zu zweit, Familienfeier oder spontaner Cappuccino zwischendurch – bei uns sind Sie immer Familie.
       </p>
-
       <div class="about-stats reveal" data-reveal="up">
         <div class="stat">
           <span class="stat-num">13+</span>
@@ -103,123 +99,15 @@
   </div>
 </section>
 
-<!-- ===== MENU ===== -->
-<section class="menu" id="menu">
-  <div class="container">
+<!-- ===== MENU CTA ===== -->
+<section class="menu" id="menu" style="background:var(--bg-soft);">
+  <div class="container" style="text-align:center;">
     <div class="section-head reveal" data-reveal="up">
       <span class="eyebrow" data-de="Speisekarte" data-en="Menu">Speisekarte</span>
       <h2 data-de="Was uns am Herzen liegt" data-en="What we love to serve">Was uns am Herzen liegt</h2>
-      <p data-de="Eine kleine Auswahl unserer beliebtesten Gerichte – täglich frisch zubereitet." data-en="A small selection of our most loved dishes – prepared fresh every day.">Eine kleine Auswahl unserer beliebtesten Gerichte – täglich frisch zubereitet.</p>
+      <p data-de="Entdecken Sie unsere vollständige Speisekarte – von Antipasti bis Dolce, von Pizza bis Fleischgerichte." data-en="Discover our full menu – from Antipasti to Dolce, from Pizza to Meat dishes.">Entdecken Sie unsere vollständige Speisekarte – von Antipasti bis Dolce, von Pizza bis Fleischgerichte.</p>
     </div>
-
-    <div class="menu-tabs reveal" data-reveal="up" role="tablist">
-      <button class="menu-tab active" data-cat="starters" data-de="Vorspeisen" data-en="Starters">Vorspeisen</button>
-      <button class="menu-tab" data-cat="mains" data-de="Hauptgerichte" data-en="Main Courses">Hauptgerichte</button>
-      <button class="menu-tab" data-cat="dessert" data-de="Dessert" data-en="Dessert">Dessert</button>
-      <button class="menu-tab" data-cat="drinks" data-de="Getränke" data-en="Drinks">Getränke</button>
-    </div>
-
-    <div class="menu-panels">
-
-      <div class="menu-panel active" data-cat="starters">
-        <div class="menu-item reveal" data-reveal="up">
-          <div class="menu-item-head">
-            <h3 data-de="Bruschetta al Pomodoro" data-en="Bruschetta al Pomodoro">Bruschetta al Pomodoro</h3>
-            <span class="price">6,50&nbsp;€</span>
-          </div>
-          <p data-de="Geröstetes Landbrot, marinierte Tomaten, Basilikum, Knoblauch" data-en="Toasted country bread, marinated tomatoes, basil, garlic">Geröstetes Landbrot, marinierte Tomaten, Basilikum, Knoblauch</p>
-        </div>
-        <div class="menu-item reveal" data-reveal="up">
-          <div class="menu-item-head">
-            <h3 data-de="Carpaccio di Manzo" data-en="Beef Carpaccio">Carpaccio di Manzo</h3>
-            <span class="price">12,90&nbsp;€</span>
-          </div>
-          <p data-de="Hauchdünnes Rinderfilet, Rucola, Parmesan, Trüffelöl" data-en="Thinly sliced beef fillet, arugula, parmesan, truffle oil">Hauchdünnes Rinderfilet, Rucola, Parmesan, Trüffelöl</p>
-        </div>
-        <div class="menu-item reveal" data-reveal="up">
-          <div class="menu-item-head">
-            <h3 data-de="Antipasti Misti" data-en="Antipasti Misti">Antipasti Misti</h3>
-            <span class="price">14,50&nbsp;€</span>
-          </div>
-          <p data-de="Auswahl an italienischem Schinken, Käse und Oliven" data-en="Selection of Italian ham, cheese and olives">Auswahl an italienischem Schinken, Käse und Oliven</p>
-        </div>
-      </div>
-
-      <div class="menu-panel" data-cat="mains">
-        <div class="menu-item reveal" data-reveal="up">
-          <div class="menu-item-head">
-            <h3 data-de="Tagliatelle al Tartufo" data-en="Tagliatelle al Tartufo">Tagliatelle al Tartufo</h3>
-            <span class="price">17,90&nbsp;€</span>
-          </div>
-          <p data-de="Hausgemachte Tagliatelle, Trüffelcreme, Parmesan" data-en="Handmade tagliatelle, truffle cream, parmesan">Hausgemachte Tagliatelle, Trüffelcreme, Parmesan</p>
-        </div>
-        <div class="menu-item reveal" data-reveal="up">
-          <div class="menu-item-head">
-            <h3 data-de="Risotto ai Funghi" data-en="Mushroom Risotto">Risotto ai Funghi</h3>
-            <span class="price">16,50&nbsp;€</span>
-          </div>
-          <p data-de="Cremiger Risotto, Steinpilze, Thymian, Parmesan" data-en="Creamy risotto, porcini mushrooms, thyme, parmesan">Cremiger Risotto, Steinpilze, Thymian, Parmesan</p>
-        </div>
-        <div class="menu-item reveal" data-reveal="up">
-          <div class="menu-item-head">
-            <h3 data-de="Pizza Casa Mia" data-en="Pizza Casa Mia">Pizza Casa Mia</h3>
-            <span class="price">13,90&nbsp;€</span>
-          </div>
-          <p data-de="San-Marzano-Tomaten, Büffelmozzarella, Basilikum, Olivenöl" data-en="San Marzano tomatoes, buffalo mozzarella, basil, olive oil">San-Marzano-Tomaten, Büffelmozzarella, Basilikum, Olivenöl</p>
-        </div>
-        <div class="menu-item reveal" data-reveal="up">
-          <div class="menu-item-head">
-            <h3 data-de="Osso Buco alla Milanese" data-en="Osso Buco alla Milanese">Osso Buco alla Milanese</h3>
-            <span class="price">24,90&nbsp;€</span>
-          </div>
-          <p data-de="Geschmorte Kalbshaxe, Gremolata, Safranrisotto" data-en="Braised veal shank, gremolata, saffron risotto">Geschmorte Kalbshaxe, Gremolata, Safranrisotto</p>
-        </div>
-      </div>
-
-      <div class="menu-panel" data-cat="dessert">
-        <div class="menu-item reveal" data-reveal="up">
-          <div class="menu-item-head">
-            <h3 data-de="Tiramisù della Casa" data-en="Tiramisù della Casa">Tiramisù della Casa</h3>
-            <span class="price">6,90&nbsp;€</span>
-          </div>
-          <p data-de="Mascarpone, Espresso, Kakao – ganz nach Familienrezept" data-en="Mascarpone, espresso, cocoa – our family recipe">Mascarpone, Espresso, Kakao – ganz nach Familienrezept</p>
-        </div>
-        <div class="menu-item reveal" data-reveal="up">
-          <div class="menu-item-head">
-            <h3 data-de="Panna Cotta ai Frutti di Bosco" data-en="Panna Cotta with Berries">Panna Cotta ai Frutti di Bosco</h3>
-            <span class="price">6,50&nbsp;€</span>
-          </div>
-          <p data-de="Vanille-Panna-Cotta, Waldbeersauce" data-en="Vanilla panna cotta, forest berry sauce">Vanille-Panna-Cotta, Waldbeersauce</p>
-        </div>
-      </div>
-
-      <div class="menu-panel" data-cat="drinks">
-        <div class="menu-item reveal" data-reveal="up">
-          <div class="menu-item-head">
-            <h3 data-de="Chianti Classico" data-en="Chianti Classico">Chianti Classico</h3>
-            <span class="price">7,50&nbsp;€</span>
-          </div>
-          <p data-de="0,2l – kräftiger Rotwein aus der Toskana" data-en="0.2l – full-bodied red wine from Tuscany">0,2l – kräftiger Rotwein aus der Toskana</p>
-        </div>
-        <div class="menu-item reveal" data-reveal="up">
-          <div class="menu-item-head">
-            <h3 data-de="Aperol Spritz" data-en="Aperol Spritz">Aperol Spritz</h3>
-            <span class="price">7,90&nbsp;€</span>
-          </div>
-          <p data-de="Aperol, Prosecco, Soda, Orange" data-en="Aperol, prosecco, soda, orange">Aperol, Prosecco, Soda, Orange</p>
-        </div>
-        <div class="menu-item reveal" data-reveal="up">
-          <div class="menu-item-head">
-            <h3 data-de="Espresso" data-en="Espresso">Espresso</h3>
-            <span class="price">2,90&nbsp;€</span>
-          </div>
-          <p data-de="Klassisch italienisch geröstet" data-en="Classic Italian roast">Klassisch italienisch geröstet</p>
-        </div>
-      </div>
-
-    </div>
-
-    <p class="menu-note reveal" data-reveal="up" data-de="Alle Preise in Euro inkl. MwSt. Vollständige Speisekarte auf Anfrage." data-en="All prices in euros incl. VAT. Full menu available on request.">Alle Preise in Euro inkl. MwSt. Vollständige Speisekarte auf Anfrage.</p>
+    <a href="menu.html" class="btn btn-primary reveal" data-reveal="up" data-de="Zur vollständigen Speisekarte" data-en="View Full Menu">Zur vollständigen Speisekarte</a>
   </div>
 </section>
 
@@ -256,7 +144,7 @@
 <!-- ===== TESTIMONIAL STRIP ===== -->
 <section class="quote-strip">
   <div class="container reveal" data-reveal="up">
-    <p class="quote-text" data-de="„Wie ein kurzer Urlaub in Italien – mitten in Riesa.“" data-en="“Like a short holiday in Italy – right in the middle of Riesa.”">„Wie ein kurzer Urlaub in Italien – mitten in Riesa.“</p>
+    <p class="quote-text" data-de="„Wie ein kurzer Urlaub in Italien – mitten in Riesa."" data-en=""Like a short holiday in Italy – right in the middle of Riesa."">„Wie ein kurzer Urlaub in Italien – mitten in Riesa."</p>
     <span class="quote-author" data-de="— ein zufriedener Gast" data-en="— a happy guest">— ein zufriedener Gast</span>
   </div>
 </section>
@@ -267,7 +155,6 @@
     <div class="contact-info">
       <span class="eyebrow reveal" data-reveal="up" data-de="Kontakt" data-en="Contact">Kontakt</span>
       <h2 class="reveal" data-reveal="up" data-de="Wir freuen uns auf Sie" data-en="We look forward to seeing you">Wir freuen uns auf Sie</h2>
-
       <ul class="info-list reveal" data-reveal="up">
         <li>
           <strong data-de="Adresse" data-en="Address">Adresse</strong>
@@ -282,7 +169,6 @@
           <span><a href="mailto:info@casamiariesa.com">info@casamiariesa.com</a></span>
         </li>
       </ul>
-
       <div class="hours reveal" data-reveal="up">
         <strong data-de="Öffnungszeiten" data-en="Opening hours">Öffnungszeiten</strong>
         <div class="hours-row"><span data-de="Montag – Freitag" data-en="Monday – Friday">Montag – Freitag</span><span>12:00 – 22:00</span></div>
