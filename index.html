@@ -15,6 +15,43 @@ img.gallery-zoom { transform: scale(1.35); }
 </style>
 </head>
 <body>
+
+<!-- ===== SPLASH SCREEN ===== -->
+<div id="splash" style="
+  position:fixed; inset:0; z-index:9999;
+  background:#f5f0e8;
+  display:flex; align-items:center; justify-content:center;
+  flex-direction:column; gap:16px;
+  transition:opacity 0.8s ease, visibility 0.8s ease;
+">
+  <span style="
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:clamp(3rem,10vw,6rem);
+    font-style:italic;
+    color:#4a0a0a;
+    letter-spacing:2px;
+  ">Benvenuti!</span>
+  <span style="
+    font-family:'Jost',sans-serif;
+    font-size:.85rem;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    color:#8b1a1a;
+  ">Casa Mia Riesa</span>
+</div>
+
+<style>
+#splash.hidden { opacity:0; visibility:hidden; }
+</style>
+
+<script>
+  window.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+      document.getElementById('splash').classList.add('hidden');
+    }, 2000);
+  });
+</script>
+
 <div class="grain"></div>
 <div class="progress-bar" id="progressBar"></div>
 
