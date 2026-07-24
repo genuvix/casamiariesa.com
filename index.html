@@ -1,242 +1,250 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title data-de="Casa Mia Riesa – Italienisches Restaurant" data-en="Casa Mia Riesa – Italian Restaurant">Casa Mia Riesa – Italienisches Restaurant</title>
-<meta name="description" data-de="Casa Mia Riesa – authentische italienische Küche im Herzen von Riesa." data-en="Casa Mia Riesa – authentic Italian cuisine in the heart of Riesa." content="Casa Mia Riesa – authentische italienische Küche im Herzen von Riesa." />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-<style>
-img.gallery-zoom { transform: scale(1.35); }
-.gallery-item:hover img.gallery-zoom { transform: scale(1.5); }
-</style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-de="Casa Mia Riesa – Italienisches Restaurant" data-en="Casa Mia Riesa – Italian Restaurant">Casa Mia Riesa – Italienisches Restaurant</title>
+    <meta name="description" data-de="Casa Mia Riesa – authentische italienische Küche im Herzen von Riesa." data-en="Casa Mia Riesa – authentic Italian cuisine in the heart of Riesa." content="Casa Mia Riesa – authentische italienische Küche im Herzen von Riesa." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        img.gallery-zoom {
+            transform: scale(1.35);
+        }
+
+        .gallery-item:hover img.gallery-zoom {
+            transform: scale(1.5);
+        }
+    </style>
 </head>
 <body>
 
-<!-- ===== SPLASH SCREEN ===== -->
-<div id="splash" style="
+    <!-- ===== SPLASH SCREEN ===== -->
+    <div id="splash" style="
   position:fixed; inset:0; z-index:9999;
   background:#f5f0e8;
   display:flex; align-items:center; justify-content:center;
   flex-direction:column; gap:16px;
   transition:opacity 0.8s ease, visibility 0.8s ease;
 ">
-  <span style="
+        <span style="
     font-family:'Playfair Display',Georgia,serif;
     font-size:clamp(3rem,10vw,6rem);
     font-style:italic;
     color:#4a0a0a;
     letter-spacing:2px;
   ">Benvenuti!</span>
-  <span style="
+        <span style="
     font-family:'Jost',sans-serif;
     font-size:.85rem;
     letter-spacing:4px;
     text-transform:uppercase;
     color:#8b1a1a;
   ">Casa Mia Riesa</span>
-</div>
-
-<style>
-#splash.hidden { opacity:0; visibility:hidden; }
-</style>
-
-<script>
-  window.addEventListener('DOMContentLoaded', function() {
-    setTimeout(function() {
-      document.getElementById('splash').classList.add('hidden');
-    }, 2000);
-  });
-</script>
-
-<div class="grain"></div>
-<div class="progress-bar" id="progressBar"></div>
-
-<!-- ===== HEADER ===== -->
-<header class="site-header" id="siteHeader">
-  <div class="header-inner">
-    <a href="#home" class="brand">
-      <span class="brand-mark">CM</span>
-      <span class="brand-name">Casa Mia</span>
-    </a>
-    <nav class="main-nav" id="mainNav">
-      <a href="#home" data-de="Start" data-en="Home">Start</a>
-      <a href="#about" data-de="Über uns" data-en="About">Über uns</a>
-      <a href="#menu" data-de="Speisekarte" data-en="Menu">Speisekarte</a>
-      <a href="#gallery" data-de="Galerie" data-en="Gallery">Galerie</a>
-      <a href="#contact" data-de="Kontakt" data-en="Contact">Kontakt</a>
-    </nav>
-    <div class="header-actions">
-      <div class="lang-switch" id="langSwitch" role="group" aria-label="Language switch">
-        <button type="button" class="lang-btn active" data-lang="de">DE</button>
-        <button type="button" class="lang-btn" data-lang="en">EN</button>
-      </div>
-      <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
     </div>
-  </div>
-</header>
 
-<!-- ===== HERO ===== -->
-<section class="hero" id="home">
-  <div class="hero-bg" id="heroBg" style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1920&q=75');"></div>
-  <div class="hero-overlay"></div>
-  <div class="hero-content reveal" data-reveal="zoom">
-    <span class="kicker" data-de="Italienisches Restaurant in Riesa" data-en="Italian Restaurant in Riesa">Italienisches Restaurant in Riesa</span>
-    <h1 class="hero-title" style="font-size:clamp(4rem,11vw,7.5rem);">
-      <span data-de="Casa Mia" data-en="Casa Mia">Casa Mia</span><br>
-    </h1>
+    <style>
+        #splash.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+    </style>
 
-    <div class="hero-cta">
-      <a href="menu.html" class="btn btn-outline" data-de="Speisekarte" data-en="Menu">Speisekarte</a>
-      <a href="tel:+4917639958931" class="btn btn-primary" data-de="Reservieren!" data-en="Reserve a Table!">Reservieren!</a>
-    </div>
-  </div>
-  <a href="#about" class="scroll-cue" aria-hidden="true"><span></span></a>
-</section>
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            setTimeout(function () {
+                document.getElementById('splash').classList.add('hidden');
+            }, 2000);
+        });
+    </script>
 
-<!-- ===== ABOUT ===== -->
-<section class="about" id="about">
-  <div class="container about-grid">
-    <div class="about-media reveal" data-reveal="zoom">
-      <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=900&q=75" alt="Chef preparing fresh pasta" loading="lazy">
-      <div class="about-media-tag">
-        <strong data-de="Seit" data-en="Since">Seit</strong>
-        <span>2018</span>
-      </div>
-    </div>
-    <div class="about-text">
-      <span class="eyebrow reveal" data-reveal="up" data-de="Unsere Geschichte" data-en="Our story">Unsere Geschichte</span>
-      <h2 class="reveal" data-reveal="up">Come in Italia.</h2>
-      <p class="reveal" data-reveal="up">Nicht jeder Ort erzählt eine Geschichte. Manche lassen sie erleben.</p>
-      <p class="reveal" data-reveal="up">Casa Mia bringt die Wärme Italiens nach Riesa – mit handgemachter Pasta, ausgewählten Zutaten und Rezepten, die von Generation zu Generation weitergegeben wurden. Hier geht es nicht nur um gutes Essen, sondern um Zeit miteinander, ehrliche Gastfreundschaft und Momente, die in Erinnerung bleiben.</p>
-      <p class="reveal" data-reveal="up">Denn die schönsten Abende beginnen oft an einem gedeckten Tisch.</p>
-      <p class="reveal" data-reveal="up"><em>Benvenuti!</em></p>
-      <div class="about-stats reveal" data-reveal="up">
-        <div class="stat">
-          <span class="stat-num">8+</span>
-          <span class="stat-label" data-de="Jahre Erfahrung" data-en="Years of experience">Jahre Erfahrung</span>
+    <div class="grain"></div>
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- ===== HEADER ===== -->
+    <header class="site-header" id="siteHeader">
+        <div class="header-inner">
+            <a href="#home" class="brand">
+                <span class="brand-mark">CM</span>
+                <span class="brand-name">Casa Mia</span>
+            </a>
+            <nav class="main-nav" id="mainNav">
+                <a href="#home" data-de="Start" data-en="Home">Start</a>
+                <a href="#about" data-de="Über uns" data-en="About">Über uns</a>
+                <a href="#menu" data-de="Speisekarte" data-en="Menu">Speisekarte</a>
+                <a href="#gallery" data-de="Galerie" data-en="Gallery">Galerie</a>
+                <a href="#contact" data-de="Kontakt" data-en="Contact">Kontakt</a>
+            </nav>
+            <div class="header-actions">
+                <div class="lang-switch" id="langSwitch" role="group" aria-label="Language switch">
+                    <button type="button" class="lang-btn active" data-lang="de">DE</button>
+                    <button type="button" class="lang-btn" data-lang="en">EN</button>
+                </div>
+                <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
         </div>
-        <div class="stat">
-          <span class="stat-num">100%</span>
-          <span class="stat-label" data-de="Hausgemachte Pasta" data-en="Homemade pasta">Hausgemachte Pasta</span>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home">
+        <div class="hero-bg" id="heroBg" style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1920&q=75');"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content reveal" data-reveal="zoom">
+            <span class="kicker" data-de="Italienisches Restaurant in Riesa" data-en="Italian Restaurant in Riesa">Italienisches Restaurant in Riesa</span>
+            <h1 class="hero-title" style="font-size:clamp(4rem,11vw,7.5rem);">
+                <span data-de="Casa Mia" data-en="Casa Mia">Casa Mia</span><br>
+            </h1>
+
+            <div class="hero-cta">
+                <a href="menu.html" class="btn btn-outline" data-de="Speisekarte" data-en="Menu">Speisekarte</a>
+                <a href="tel:+4917639958931" class="btn btn-primary" data-de="Reservieren!" data-en="Reserve a Table!">Reservieren!</a>
+            </div>
         </div>
-        <div class="stat">
-          <span class="stat-num">4.6★</span>
-          <span class="stat-label" data-de="Gästebewertung" data-en="Guest rating">Gästebewertung</span>
+        <a href="#about" class="scroll-cue" aria-hidden="true"><span></span></a>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="about" id="about">
+        <div class="container about-grid">
+            <div class="about-media reveal" data-reveal="zoom">
+                <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=900&q=75" alt="Chef preparing fresh pasta" loading="lazy">
+                <div class="about-media-tag">
+                    <strong data-de="Seit" data-en="Since">Seit</strong>
+                    <span>2018</span>
+                </div>
+            </div>
+            <div class="about-text">
+                <span class="eyebrow reveal" data-reveal="up" data-de="Unsere Geschichte" data-en="Our story">Unsere Geschichte</span>
+                <h2 class="reveal" data-reveal="up">Come in Italia.</h2>
+                <p class="reveal" data-reveal="up">Nicht jeder Ort erzählt eine Geschichte. Manche lassen sie erleben.</p>
+                <p class="reveal" data-reveal="up">Casa Mia bringt die Wärme Italiens nach Riesa – mit handgemachter Pasta, ausgewählten Zutaten und Rezepten, die von Generation zu Generation weitergegeben wurden. Hier geht es nicht nur um gutes Essen, sondern um Zeit miteinander, ehrliche Gastfreundschaft und Momente, die in Erinnerung bleiben.</p>
+                <p class="reveal" data-reveal="up">Denn die schönsten Abende beginnen oft an einem gedeckten Tisch.</p>
+                <p class="reveal" data-reveal="up"><em>Benvenuti!</em></p>
+                <div class="about-stats reveal" data-reveal="up">
+                    <div class="stat">
+                        <span class="stat-num">8+</span>
+                        <span class="stat-label" data-de="Jahre Erfahrung" data-en="Years of experience">Jahre Erfahrung</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-num">100%</span>
+                        <span class="stat-label" data-de="Hausgemachte Pasta" data-en="Homemade pasta">Hausgemachte Pasta</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-num">4.6★</span>
+                        <span class="stat-label" data-de="Gästebewertung" data-en="Guest rating">Gästebewertung</span>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- ===== MENU CTA ===== -->
-<section class="menu" id="menu" style="background:var(--bg-soft);">
-  <div class="container" style="text-align:center;">
-    <div class="section-head reveal" data-reveal="up">
-      <span class="eyebrow" data-de="Speisekarte" data-en="Menu">Speisekarte</span>
-      <h2 data-de="Was uns am Herzen liegt" data-en="What we love to serve">Was uns am Herzen liegt</h2>
-      <p data-de="Entdecken Sie unsere vollständige Speisekarte – von Antipasti bis Dolce, von Pizza bis Fleischgerichte." data-en="Discover our full menu – from Antipasti to Dolce, from Pizza to Meat dishes.">Entdecken Sie unsere vollständige Speisekarte – von Antipasti bis Dolce, von Pizza bis Fleischgerichte.</p>
-    </div>
-    <a href="menu.html" class="btn btn-primary reveal" data-reveal="up" data-de="Zur vollständigen Speisekarte" data-en="View Full Menu">Zur vollständigen Speisekarte</a>
-  </div>
-</section>
+    <!-- ===== MENU CTA ===== -->
+    <section class="menu" id="menu" style="background:var(--bg-soft);">
+        <div class="container" style="text-align:center;">
+            <div class="section-head reveal" data-reveal="up">
+                <span class="eyebrow" data-de="Speisekarte" data-en="Menu">Speisekarte</span>
+                <h2 data-de="Was uns am Herzen liegt" data-en="What we love to serve">Was uns am Herzen liegt</h2>
+                <p data-de="Entdecken Sie unsere vollständige Speisekarte – von Antipasti bis Dolce, von Pizza bis Fleischgerichte." data-en="Discover our full menu – from Antipasti to Dolce, from Pizza to Meat dishes.">Entdecken Sie unsere vollständige Speisekarte – von Antipasti bis Dolce, von Pizza bis Fleischgerichte.</p>
+            </div>
+            <a href="menu.html" class="btn btn-primary reveal" data-reveal="up" data-de="Zur vollständigen Speisekarte" data-en="View Full Menu">Zur vollständigen Speisekarte</a>
+        </div>
+    </section>
 
-<!-- ===== GALLERY ===== -->
-<section class="gallery" id="gallery">
-  <div class="container">
-    <div class="section-head reveal" data-reveal="up">
-      <span class="eyebrow" style="font-size:1.4rem; letter-spacing:5px;" data-de="Galerie" data-en="Gallery">Galerie</span>
-    </div>
-  </div>
-  <div class="gallery-grid">
-    <figure class="gallery-item reveal" data-reveal="zoom">
-      <img src="gallery1.jpg" alt="Pasta dish" loading="lazy" class="gallery-zoom">
-    </figure>
-    <figure class="gallery-item reveal" data-reveal="zoom">
-      <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=75" alt="Pizza" loading="lazy">
-    </figure>
-    <figure class="gallery-item reveal" data-reveal="zoom">
-      <img src="gallery2.jpg" alt="Chef cooking" loading="lazy">
-    </figure>
-    <figure class="gallery-item reveal" data-reveal="zoom">
-      <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=800&q=75" alt="Plated dish" loading="lazy">
-    </figure>
-    <figure class="gallery-item reveal" data-reveal="zoom">
-      <img src="gallery3.jpg" alt="Dessert" loading="lazy">
-    </figure>
-    <figure class="gallery-item reveal" data-reveal="zoom">
-      <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=75" alt="Restaurant table" loading="lazy">
-    </figure>
-  </div>
-</section>
+    <!-- ===== GALLERY ===== -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="section-head reveal" data-reveal="up">
+                <span class="eyebrow" style="font-size:1.4rem; letter-spacing:5px;" data-de="Galerie" data-en="Gallery">Galerie</span>
+            </div>
+        </div>
+        <div class="gallery-grid">
+            <figure class="gallery-item reveal" data-reveal="zoom">
+                <img src="gallery1.jpg" alt="Pasta dish" loading="lazy" class="gallery-zoom">
+            </figure>
+            <figure class="gallery-item reveal" data-reveal="zoom">
+                <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=75" alt="Pizza" loading="lazy">
+            </figure>
+            <figure class="gallery-item reveal" data-reveal="zoom">
+                <img src="gallery2.jpg" alt="Chef cooking" loading="lazy">
+            </figure>
+            <figure class="gallery-item reveal" data-reveal="zoom">
+                <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=800&q=75" alt="Plated dish" loading="lazy">
+            </figure>
+            <figure class="gallery-item reveal" data-reveal="zoom">
+                <img src="gallery3.jpg" alt="Dessert" loading="lazy">
+            </figure>
+            <figure class="gallery-item reveal" data-reveal="zoom">
+                <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=75" alt="Restaurant table" loading="lazy">
+            </figure>
+        </div>
+    </section>
 
-<!-- ===== TESTIMONIAL STRIP ===== -->
-<section class="quote-strip">
-  <div class="container">
-    <p class="quote-text" data-de="„Wie ein kurzer Urlaub in Italien – mitten in Riesa."" data-en="&ldquo;Like a short holiday in Italy &ndash; right in the middle of Riesa.&rdquo;">„Wie ein kurzer Urlaub in Italien – mitten in Riesa."</p>
-    <span class="quote-author" data-de="— ein zufriedener Gast" data-en="— a happy guest">— ein zufriedener Gast</span>
-  </div>
-</section>
+    <!-- ===== TESTIMONIAL STRIP ===== -->
+    <section class="quote-strip">
+        <div class="container">
+            <p class="quote-text" data-de="„Wie ein kurzer Urlaub in Italien – mitten in Riesa." " data-en=" &ldquo;Like a short holiday in Italy &ndash; right in the middle of Riesa.&rdquo;">„Wie ein kurzer Urlaub in Italien – mitten in Riesa."</p>
+            <span class="quote-author" data-de="— ein zufriedener Gast" data-en="— a happy guest">— ein zufriedener Gast</span>
+        </div>
+    </section>
 
-<!-- ===== CONTACT ===== -->
-<section class="contact" id="contact">
-  <div class="container contact-grid">
-    <div class="contact-info">
-      <span class="eyebrow reveal" data-reveal="up" data-de="Kontakt" data-en="Contact">Kontakt</span>
-      <h2 class="reveal" data-reveal="up">Vi aspettiamo!</h2>
-      <ul class="info-list reveal" data-reveal="up">
-        <li>
-          <strong data-de="Adresse" data-en="Address">Adresse</strong>
-          <span>Pausitzer Str. 11, 01589 Riesa</span>
-        </li>
-        <li>
-          <strong data-de="Telefon" data-en="Phone">Telefon</strong>
-          <span><a href="tel:+4917639958931">(+49) 176 39958931</a></span>
-        </li>
-        <li>
-          <strong data-de="E-Mail" data-en="Email">E-Mail</strong>
-          <span><a href="mailto:info@casamiariesa.com">info@casamiariesa.com</a></span>
-        </li>
-      </ul>
-      <div class="hours reveal" data-reveal="up">
-        <strong data-de="Öffnungszeiten" data-en="Opening hours">Öffnungszeiten</strong>
-        <div class="hours-row"><span data-de="Montag" data-en="Monday">Montag</span><span data-de="Geschlossen" data-en="Closed">Geschlossen</span></div>
-        <div class="hours-row"><span data-de="Dienstag – Freitag" data-en="Tuesday – Friday">Dienstag – Freitag</span><span>17:00 – 23:00</span></div>
-        <div class="hours-row"><span data-de="Samstag – Sonntag" data-en="Saturday – Sunday">Samstag – Sonntag</span><span>11:30 – 14:30 &amp; 17:00 – 23:00</span></div>
-      </div>
-    </div>
-  </div>
-</section>
+    <!-- ===== CONTACT ===== -->
+    <section class="contact" id="contact">
+        <div class="container contact-grid">
+            <div class="contact-info">
+                <span class="eyebrow reveal" data-reveal="up" data-de="Kontakt" data-en="Contact">Kontakt</span>
+                <h2 class="reveal" data-reveal="up">Vi aspettiamo!</h2>
+                <ul class="info-list reveal" data-reveal="up">
+                    <li>
+                        <strong data-de="Adresse" data-en="Address">Adresse</strong>
+                        <span>Pausitzer Str. 11, 01589 Riesa</span>
+                    </li>
+                    <li>
+                        <strong data-de="Telefon" data-en="Phone">Telefon</strong>
+                        <span><a href="tel:+4917639958931">(+49) 176 39958931</a></span>
+                    </li>
+                    <li>
+                        <strong data-de="E-Mail" data-en="Email">E-Mail</strong>
+                        <span><a href="mailto:info@casamiariesa.com">info@casamiariesa.com</a></span>
+                    </li>
+                </ul>
+                <div class="hours reveal" data-reveal="up">
+                    <strong data-de="Öffnungszeiten" data-en="Opening hours">Öffnungszeiten</strong>
+                    <div class="hours-row"><span data-de="Montag" data-en="Monday">Montag</span><span data-de="Geschlossen" data-en="Closed">Geschlossen</span></div>
+                    <div class="hours-row"><span data-de="Dienstag – Freitag" data-en="Tuesday – Friday">Dienstag – Freitag</span><span>17:00 – 23:00</span></div>
+                    <div class="hours-row"><span data-de="Samstag – Sonntag" data-en="Saturday – Sunday">Samstag – Sonntag</span><span>11:30 – 14:30 &amp; 17:00 – 23:00</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- ===== FOOTER ===== -->
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <div class="footer-brand">
-      <span class="brand-mark">CM</span>
-      <span class="brand-name">Casa Mia</span>
-    </div>
-    <nav class="footer-nav">
-      <a href="#home" data-de="Start" data-en="Home">Start</a>
-      <a href="#about" data-de="Über uns" data-en="About">Über uns</a>
-      <a href="#menu" data-de="Speisekarte" data-en="Menu">Speisekarte</a>
-      <a href="#gallery" data-de="Galerie" data-en="Gallery">Galerie</a>
-      <a href="#contact" data-de="Kontakt" data-en="Contact">Kontakt</a>
-    </nav>
-    <div class="footer-social">
-      <a href="https://www.instagram.com/casamiariesa" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
-    </div>
-  </div>
-  <div class="container footer-bottom">
-    <span>&copy; <span id="year"></span> Casa Mia Riesa.</span>
-    <span data-de="Alle Rechte vorbehalten." data-en="All rights reserved.">Alle Rechte vorbehalten.</span>
-  </div>
-</footer>
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <span class="brand-mark">CM</span>
+                <span class="brand-name">Casa Mia</span>
+            </div>
+            <nav class="footer-nav">
+                <a href="#home" data-de="Start" data-en="Home">Start</a>
+                <a href="#about" data-de="Über uns" data-en="About">Über uns</a>
+                <a href="#menu" data-de="Speisekarte" data-en="Menu">Speisekarte</a>
+                <a href="#gallery" data-de="Galerie" data-en="Gallery">Galerie</a>
+                <a href="#contact" data-de="Kontakt" data-en="Contact">Kontakt</a>
+            </nav>
+            <div class="footer-social">
+                <a href="https://www.instagram.com/casamiariesa" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <span>&copy; <span id="year"></span> Casa Mia Riesa.</span>
+            <span data-de="Alle Rechte vorbehalten." data-en="All rights reserved.">Alle Rechte vorbehalten.</span>
+        </div>
+    </footer>
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
