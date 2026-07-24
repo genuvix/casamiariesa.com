@@ -103,11 +103,12 @@ section{ position:relative; padding:120px 0; }
 }
 .btn-primary:hover{ background:linear-gradient(135deg,var(--red-500),var(--red-700)); }
 .btn-outline{
-  border-color:rgba(26,18,9,0.3);
-  color:var(--cream);
-  background:transparent;
+  border-color:rgba(74,10,10,0.5);
+  color:var(--red-900);
+  background:rgba(245,240,232,0.6);
+  backdrop-filter:blur(4px);
 }
-.btn-outline:hover{ border-color:var(--red-500); color:var(--red-500); }
+.btn-outline:hover{ border-color:var(--red-700); color:var(--red-700); background:rgba(245,240,232,0.85); }
 .btn-ghost{
   font-size:.85rem;
   color:var(--cream-dim);
