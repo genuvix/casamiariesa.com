@@ -5,60 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title data-de="Casa Mia Riesa – Italienisches Restaurant" data-en="Casa Mia Riesa – Italian Restaurant">Casa Mia Riesa – Italienisches Restaurant</title>
     <meta name="description" data-de="Casa Mia Riesa – authentische italienische Küche im Herzen von Riesa." data-en="Casa Mia Riesa – authentic Italian cuisine in the heart of Riesa." content="Casa Mia Riesa – authentische italienische Küche im Herzen von Riesa." />
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <style>
-        img.gallery-zoom {
-            transform: scale(1.35);
-        }
-
-        .gallery-item:hover img.gallery-zoom {
-            transform: scale(1.5);
-        }
-    </style>
 </head>
 <body>
 
     <!-- ===== SPLASH SCREEN ===== -->
-    <div id="splash" style="
-  position:fixed; inset:0; z-index:9999;
-  background:#f5f0e8;
-  display:flex; align-items:center; justify-content:center;
-  flex-direction:column; gap:16px;
-  transition:opacity 0.8s ease, visibility 0.8s ease;
-">
-        <span style="
-    font-family:'Playfair Display',Georgia,serif;
-    font-size:clamp(3rem,10vw,6rem);
-    font-style:italic;
-    color:#4a0a0a;
-    letter-spacing:2px;
-  ">Benvenuti!</span>
-        <span style="
-    font-family:'Jost',sans-serif;
-    font-size:.85rem;
-    letter-spacing:4px;
-    text-transform:uppercase;
-    color:#8b1a1a;
-  ">Casa Mia</span>
+    <div id="splash" style="position:fixed;inset:0;z-index:9999;background:#f5f0e8;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;transition:opacity 0.8s ease,visibility 0.8s ease;">
+        <span style="font-family:'Playfair Display',Georgia,serif;font-size:clamp(3rem,10vw,6rem);font-style:italic;color:#4a0a0a;letter-spacing:2px;">Benvenuti!</span>
+        <span style="font-family:'Jost',sans-serif;font-size:.85rem;letter-spacing:4px;text-transform:uppercase;color:#8b1a1a;">Casa Mia</span>
     </div>
-
     <style>
         #splash.hidden {
             opacity: 0;
             visibility: hidden;
         }
     </style>
-
-    <script>
-        window.addEventListener('DOMContentLoaded', function () {
-            setTimeout(function () {
-                document.getElementById('splash').classList.add('hidden');
-            }, 2000);
-        });
-    </script>
+    <script>window.addEventListener('DOMContentLoaded', function () { setTimeout(function () { document.getElementById('splash').classList.add('hidden'); }, 2000); });</script>
 
     <div class="grain"></div>
     <div class="progress-bar" id="progressBar"></div>
@@ -98,7 +64,6 @@
                 <span data-de="Casa Mia" data-en="Casa Mia">Casa Mia</span>
             </h1>
             <span class="kicker" style="margin-top:12px;" data-de="Italienisches Restaurant in Riesa" data-en="Italian Restaurant in Riesa">Italienisches Restaurant in Riesa</span>
-
             <div class="hero-cta">
                 <a href="menu.html" class="btn btn-outline" data-de="Speisekarte" data-en="Menu">Speisekarte</a>
                 <a href="tel:+4917639958931" class="btn btn-primary" data-de="Reservieren!" data-en="Reserve a Table!">Reservieren!</a>
@@ -125,18 +90,9 @@
                 <p class="reveal" data-reveal="up">Denn die schönsten Abende beginnen oft an einem gedeckten Tisch.</p>
                 <p class="reveal" data-reveal="up"><em>Benvenuti!</em></p>
                 <div class="about-stats reveal" data-reveal="up">
-                    <div class="stat">
-                        <span class="stat-num">8+</span>
-                        <span class="stat-label" data-de="Jahre Erfahrung" data-en="Years of experience">Jahre Erfahrung</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-num">100%</span>
-                        <span class="stat-label" data-de="Hausgemachte Pasta" data-en="Homemade pasta">Hausgemachte Pasta</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-num">4.6★</span>
-                        <span class="stat-label" data-de="Gästebewertung" data-en="Guest rating">Gästebewertung</span>
-                    </div>
+                    <div class="stat"><span class="stat-num">8+</span><span class="stat-label" data-de="Jahre Erfahrung" data-en="Years of experience">Jahre Erfahrung</span></div>
+                    <div class="stat"><span class="stat-num">100%</span><span class="stat-label" data-de="Hausgemachte Pasta" data-en="Homemade pasta">Hausgemachte Pasta</span></div>
+                    <div class="stat"><span class="stat-num">4.6★</span><span class="stat-label" data-de="Gästebewertung" data-en="Guest rating">Gästebewertung</span></div>
                 </div>
             </div>
         </div>
@@ -157,23 +113,22 @@
     <!-- ===== GALLERY SLIDER ===== -->
     <section class="gallery" id="gallery" style="padding:0;background:var(--bg-soft);">
         <div class="container" style="padding-top:80px;padding-bottom:40px;text-align:center;">
-            <span class="eyebrow" style="font-size:1.4rem; letter-spacing:5px;" data-de="Galerie" data-en="Gallery">Galerie</span>
+            <span class="eyebrow" style="font-size:1.4rem;letter-spacing:5px;" data-de="Galerie" data-en="Gallery">Galerie</span>
         </div>
-
-        <div style="position:relative;overflow:hidden;width:100%;height:500px;">
+        <div style="position:relative;overflow:hidden;width:100%;height:80vh;max-height:700px;min-height:300px;">
             <div id="sliderTrack" style="display:flex;height:100%;transition:transform 0.7s cubic-bezier(.22,.61,.36,1);">
-                <div style="min-width:100%;height:100%;flex-shrink:0;"><img src="photo1.jpeg" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center;"></div>
-                <div style="min-width:100%;height:100%;flex-shrink:0;"><img src="photo2.jpeg" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center;"></div>
-                <div style="min-width:100%;height:100%;flex-shrink:0;"><img src="photo3.jpeg" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center;"></div>
-                <div style="min-width:100%;height:100%;flex-shrink:0;"><img src="photo4.jpeg" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center;"></div>
-                <div style="min-width:100%;height:100%;flex-shrink:0;"><img src="photo5.jpeg" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center;"></div>
-                <div style="min-width:100%;height:100%;flex-shrink:0;"><img src="photo6.jpeg" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center;"></div>
-                <div style="min-width:100%;height:100%;flex-shrink:0;"><img src="photo7.jpeg" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center;"></div>
-                <div style="min-width:100%;height:100%;flex-shrink:0;"><img src="photo8.jpeg" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center;"></div>
+                <div style="min-width:100%;height:100%;flex-shrink:0;"><img src="photo1.jpeg" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center 30%;"></div>
+                <div style="min-width:100%;height:100%;flex-shrink:0;"><img src="photo2.jpeg" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center center;"></div>
+                <div style="min-width:100%;height:100%;flex-shrink:0;"><img src="photo3.jpeg" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center 30%;"></div>
+                <div style="min-width:100%;height:100%;flex-shrink:0;"><img src="photo4.jpeg" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center center;"></div>
+                <div style="min-width:100%;height:100%;flex-shrink:0;"><img src="photo5.jpeg" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center center;"></div>
+                <div style="min-width:100%;height:100%;flex-shrink:0;"><img src="photo6.jpeg" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center center;"></div>
+                <div style="min-width:100%;height:100%;flex-shrink:0;"><img src="photo7.jpeg" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center center;"></div>
+                <div style="min-width:100%;height:100%;flex-shrink:0;"><img src="photo8.jpeg" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center center;"></div>
             </div>
-            <button onclick="sliderPrev()" style="position:absolute;left:16px;top:50%;transform:translateY(-50%);background:rgba(245,240,232,0.85);border:none;width:40px;height:40px;border-radius:50%;font-size:20px;cursor:pointer;color:#4a0a0a;z-index:10;">&#8249;</button>
-            <button onclick="sliderNext()" style="position:absolute;right:16px;top:50%;transform:translateY(-50%);background:rgba(245,240,232,0.85);border:none;width:40px;height:40px;border-radius:50%;font-size:20px;cursor:pointer;color:#4a0a0a;z-index:10;">&#8250;</button>
-            <div id="sliderDots" style="position:absolute;bottom:14px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:10;">
+            <button onclick="sliderPrev()" style="position:absolute;left:16px;top:50%;transform:translateY(-50%);background:rgba(245,240,232,0.85);border:none;width:44px;height:44px;border-radius:50%;font-size:22px;cursor:pointer;color:#4a0a0a;z-index:10;">&#8249;</button>
+            <button onclick="sliderNext()" style="position:absolute;right:16px;top:50%;transform:translateY(-50%);background:rgba(245,240,232,0.85);border:none;width:44px;height:44px;border-radius:50%;font-size:22px;cursor:pointer;color:#4a0a0a;z-index:10;">&#8250;</button>
+            <div style="position:absolute;bottom:16px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:10;">
                 <span onclick="sliderGo(0)" class="sdot" style="width:8px;height:8px;border-radius:50%;background:#f5f0e8;cursor:pointer;opacity:1;transition:opacity .3s;display:inline-block;"></span>
                 <span onclick="sliderGo(1)" class="sdot" style="width:8px;height:8px;border-radius:50%;background:#f5f0e8;cursor:pointer;opacity:0.4;transition:opacity .3s;display:inline-block;"></span>
                 <span onclick="sliderGo(2)" class="sdot" style="width:8px;height:8px;border-radius:50%;background:#f5f0e8;cursor:pointer;opacity:0.4;transition:opacity .3s;display:inline-block;"></span>
@@ -201,11 +156,12 @@
         function sliderAuto() { sliderGo((sliderIndex + 1) % sliderTotal); }
         sliderTimer = setInterval(sliderAuto, 3500);
     </script>
+
     <!-- ===== TESTIMONIAL STRIP ===== -->
     <section class="quote-strip">
         <div class="container">
-            <p class="quote-text" data-de="„Wie ein kurzer Urlaub in Italien – mitten in Riesa." " data-en=" &ldquo;Like a short holiday in Italy &ndash; right in the middle of Riesa.&rdquo;">„Wie ein kurzer Urlaub in Italien – mitten in Riesa."</p>
-            <span class="quote-author" data-de="— ein zufriedener Gast" data-en="— a happy guest">— ein zufriedener Gast</span>
+            <p class="quote-text" data-de="&bdquo;Wie ein kurzer Urlaub in Italien &ndash; mitten in Riesa.&ldquo;" data-en="&ldquo;Like a short holiday in Italy &ndash; right in the middle of Riesa.&rdquo;">&bdquo;Wie ein kurzer Urlaub in Italien &ndash; mitten in Riesa.&ldquo;</p>
+            <span class="quote-author" data-de="&mdash; ein zufriedener Gast" data-en="&mdash; a happy guest">&mdash; ein zufriedener Gast</span>
         </div>
     </section>
 
@@ -224,10 +180,6 @@
                         <strong data-de="Telefon" data-en="Phone">Telefon</strong>
                         <span><a href="tel:+4917639958931">(+49) 176 39958931</a></span>
                     </li>
-                    <!-- <li>
-                        <strong data-de="E-Mail" data-en="Email">E-Mail</strong>
-                        <span><a href="mailto:info@casamiariesa.com">info@casamiariesa.com</a></span>
-                    </li> -->
                 </ul>
                 <div class="hours reveal" data-reveal="up">
                     <strong data-de="Öffnungszeiten" data-en="Opening hours">Öffnungszeiten</strong>
