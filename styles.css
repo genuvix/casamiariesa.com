@@ -374,13 +374,36 @@ img.gallery-zoom { transform: scale(1.35); }
   html{ scroll-behavior:auto; }
   .hero-bg{ transform:none !important; }
 }
-.about-photo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transform: scale(0.85); /* Zoom out */
-    transform-origin: center;
-}
 .about-media {
+    position: relative;
     overflow: hidden;
+    background: #f5f0e8;
+}
+
+    .about-media img {
+        display: block;
+        object-position: center;
+    }
+
+@media (min-width: 701px) {
+    .about-media {
+        height: 600px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .about-media img {
+            width: 90%;
+            height: 90%;
+            object-fit: contain;
+        }
+}
+
+@media (max-width: 700px) {
+    .about-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }
