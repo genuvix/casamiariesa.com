@@ -375,12 +375,13 @@ img.gallery-zoom { transform: scale(1.35); }
   .hero-bg{ transform:none !important; }
 }
 .about-media {
+    aspect-ratio: 4 / 5; /* Daha kare görünüm */
     overflow: hidden;
 }
 
     .about-media img {
         width: 100%;
-        height: 70%;
+        height: 100%;
         object-fit: cover;
         object-position: center 20%;
     }
