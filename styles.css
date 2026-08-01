@@ -385,3 +385,40 @@ img.gallery-zoom { transform: scale(1.35); }
         object-fit: cover;
         object-position: center 20%;
     }
+
+.photo-grid div {
+    overflow: hidden;
+}
+
+.zoom2 {
+    transform: scale(.88);
+}
+
+.zoom4 {
+    transform: scale(.84);
+}
+
+.zoom5 {
+    transform: scale(.90);
+}
+
+.zoom8 {
+    transform: scale(.86);
+}
+
+/* Hover olduğunda da aynı oran korunsun */
+.zoom2:hover {
+    transform: scale(.91);
+}
+
+.zoom4:hover {
+    transform: scale(.87);
+}
+
+.zoom5:hover {
+    transform: scale(.93);
+}
+
+.zoom8:hover {
+    transform: scale(.89);
+}
