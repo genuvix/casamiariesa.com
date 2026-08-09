@@ -422,3 +422,78 @@ img.gallery-zoom { transform: scale(1.35); }
 .zoom8:hover {
     transform: scale(.89);
 }
+
+/* =========================================================
+   CASA MIA HEADER LOGO
+   ========================================================= */
+
+.brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+/* Yeni PNG logo */
+.header-logo {
+    display: block;
+    width: 150px;
+    height: 70px;
+    object-fit: contain;
+    object-position: left center;
+}
+
+/* Header yüksekliğini logoya uygun tut */
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 8px 28px;
+    gap: 24px;
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 900px) {
+
+    .header-logo {
+        width: 135px;
+        height: 62px;
+    }
+
+    .header-inner {
+        padding: 7px 20px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 700px) {
+
+    .header-logo {
+        width: 115px;
+        height: 55px;
+    }
+
+    .header-inner {
+        padding: 6px 16px;
+    }
+}
+
+
+/* Çok küçük telefonlar */
+@media (max-width: 400px) {
+
+    .header-logo {
+        width: 105px;
+        height: 50px;
+    }
+}
